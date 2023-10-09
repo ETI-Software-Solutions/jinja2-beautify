@@ -1,4 +1,3 @@
-[![npm version](https://badge.fury.io/js/@prighter%2Fjinja2-beautify.svg)](https://badge.fury.io/js/@prighter%2Fjinja2-beautify)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 # Jinja Beautify
@@ -29,35 +28,20 @@ These instructions will get you a copy of the project up and running on your loc
 Start with cloning this repo on your local machine:
 
 ```sh
-$ git clone https://github.com/hakanalpp/jinja2-beautify.git
+$ git clone https://github.com/ETI-Software-Solutions/jinja2-beautify.git
 $ cd PROJECT
 ```
 
 To install and set up the library, run:
 
 ```sh
-$ yarn add --dev jinja2-beautify
+$ yarn add --dev @etisoftware/jinja2-beautify
 ```
 
 Or if you prefer using NPM:
 
 ```sh
-$ npm install -S jinja2-beautify
-```
-
-## Usage
-
-### Running the package globally
-
-```sh
-npx jinja2-beautify <filename1.html> <filename2.html>
-```
-
-
-### Running the app
-
-```sh
-$ yarn start <filename1.html> <filename2.html>
+$ npm install -S @etisoftware/jinja2-beautify
 ```
 
 ### Running the tests

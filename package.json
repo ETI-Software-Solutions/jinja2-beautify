@@ -1,35 +1,26 @@
 {
-  "name": "@prighter/jinja2-beautify",
-  "version": "1.0.0",
-  "homepage": "https://github.com/Prighter/jinja2-beautify",
-  "main": "index.js",
-  "bin": {
-    "jinja2-beautify": "index.js"
-  },
-  "repository": "git@github.com:Prighter/jinja2-beautify.git",
+  "name": "@etisoftware/jinja2-beautify",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ETI-Software-Solutions/jinja2-beautify",
+  "main": "src/beautifyJinja.js",
+  "repository": "git@github.com:ETI-Software-Solutions/jinja2-beautify.git",
   "author": "Hakan Alp <hakana926@gmail.com>",
   "license": "MIT",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/hakanalpp/Prighter/issues",
-    "email": "hakana926@gmail.com"
+    "url": "https://github.com/hakanalpp/ETI-Software-Solutions/issues"
   },
   "publishConfig": {
-    "access": "public"
-  },  
+    "registry": "https://docker.etisoftware.com:443/artifactory/npm-local/"
+  },   
   "keywords": [
     "jinja formatter",
     "jinja",
     "beautifier",
     "formatter"
   ],
-  "scripts": {
-    "start": "node index.js",
-    "test": "node src/test.js"
-  },
   "dependencies": {
-    "js-beautify": "^1.14.0",
-    "yargs": "^17.3.0"
+    "js-beautify": "^1.14.0"
   },
   "devDependencies": {
     "eslint": "^8.4.0",
