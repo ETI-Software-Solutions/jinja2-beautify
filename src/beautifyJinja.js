@@ -7,7 +7,7 @@ export function beautifyJinja(htmlString = "") {
 }
 
 function jinjaToHTML(jinjaString = "") {
-  const r = /({%[-]?) *(.*?) +(.*?) *([-]?%})/gs;
+  const r = /({%[-]?|{{|{#) *(.*?) +(.*?) *([-]?%}|}}|#})/gs;
 
   return jinjaString.replace(r, (match, _, cmd, __, ___, index) => {
     for (let i = index; i > 0; i -= 1) {
@@ -15,13 +15,19 @@ function jinjaToHTML(jinjaString = "") {
       else if (jinjaString[i] === "<") return match;
     }
 
-    if (cmd === "from" || cmd === "extends" || cmd === "set" || cmd === "include") {
+    if (
+      cmd === "from" ||
+      cmd === "extends" ||
+      cmd === "set" ||
+      cmd === "include" ||
+      match.startsWith("{{")
+    ) {
       return `<jinjaTag ${match}></jinjaTag>`;
     }
     if (cmd === "else" || cmd === "elif") {
       return `</jinjaTag><jinjaTag ${match}>`;
     }
-    if (cmd.startsWith("end")) {
+    if (cmd.startsWith("end") || match.startsWith("{#")) {
       return `</jinjaTag ${match}>`;
     }
     return `<jinjaTag ${match}>`;

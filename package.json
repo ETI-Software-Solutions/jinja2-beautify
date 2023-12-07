@@ -1,6 +1,6 @@
 {
   "name": "@etisoftware/jinja2-beautify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/ETI-Software-Solutions/jinja2-beautify",
   "main": "src/beautifyJinja.js",
   "repository": "git@github.com:ETI-Software-Solutions/jinja2-beautify.git",
